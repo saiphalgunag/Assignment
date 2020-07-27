@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2020-07-27T07:46:55Z"
+  creationTimestamp: "2020-07-27T06:50:39Z"
+  labels:
+    app.kubernetes.io/instance: sai
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: test
+    app.kubernetes.io/version: 1.16.0
+    helm.sh/chart: test-0.1.0
+  name: sai-test
+  namespace: default
+  resourceVersion: "22252"
+  selfLink: /api/v1/namespaces/default/endpoints/sai-test
+  uid: 2e286a3d-ad62-4527-9d79-c516c2f0a01e
+subsets:
+- addresses:
+  - ip: 10.1.0.10
+    nodeName: docker-desktop
+    targetRef:
+      kind: Pod
+      name: sai-test-6c4c5c9877-w49pr
+      namespace: default
+      resourceVersion: "22251"
+      uid: 1b8cfe38-b92a-4f36-91d2-46bf17aac215
+  - ip: 10.1.0.9
+    nodeName: docker-desktop
+    targetRef:
+      kind: Pod
+      name: sai-test-6c4c5c9877-x7n6h
+      namespace: default
+      resourceVersion: "19017"
+      uid: c9748ea9-2d55-4358-a912-08aba443d180
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
